@@ -1,16 +1,5 @@
 import React, {Component} from 'react'
-
-import {
-  StatusBar,
-  Clipboard,
-  StyleSheet,
-  Image,
-  Dimensions,
-  ScrollView,
-  AsyncStorage,
-  TouchableOpacity,
-} from 'react-native'
-
+import {StatusBar, Clipboard, StyleSheet, Image} from 'react-native'
 import {
   Container,
   Content,
@@ -29,9 +18,7 @@ import {
 } from 'native-base'
 
 import RNFetchBlob from 'rn-fetch-blob'
-
 import Share from 'react-native-share'
-
 import {Col, Row, Grid} from 'react-native-easy-grid'
 
 const styles = StyleSheet.create({
@@ -81,7 +68,6 @@ export default class ShareImage extends Component {
         .then(res => {
           console.log('response', res)
           let status = res.info().status
-
           if (status == 200) {
             let base64Str = res.base64()
             this.setState({
@@ -89,9 +75,6 @@ export default class ShareImage extends Component {
               loading: false,
               imageLoad: false,
             })
-
-            let text = res.text()
-            let json = res.json()
           } else {
             this.setState({
               loading: false,
@@ -99,7 +82,6 @@ export default class ShareImage extends Component {
             })
           }
         })
-
         .catch((errorMessage, statusCode) => {})
     })
   }
