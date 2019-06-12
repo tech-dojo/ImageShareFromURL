@@ -54,7 +54,7 @@ export default class ShareImage extends Component {
     super(props)
     this.state = {
       imageUrl:
-        'https://cdn.pixabay.com/photo/2014/09/24/14/29/mac-459196_1280.jpg',
+        'https://cdn-images-1.medium.com/max/1200/1*K0a7xINk0RM5gfXGSN68cw.png',
       data: [],
       imageLoad: true,
       loading: true,
@@ -148,32 +148,29 @@ export default class ShareImage extends Component {
                 style={{
                   margin: 'auto',
                   justifyContent: 'center',
+                  flex: 1,
                 }}
               >
-                <Col style={{margin: 10}}>
-                  <Button
-                    style={{
-                      backgroundColor: '#ffffff',
-
-                      borderRadius: 15,
-                    }}
-                    onPress={this.readFromClipboard}
-                  >
-                    <Text style={{color: '#8dc53e'}}>Paste URL</Text>
-                  </Button>
-                </Col>
-                <Col style={{margin: 10}}>
-                  <Button
-                    style={{
-                      borderRadius: 15,
-
-                      backgroundColor: 'rgba(141,197,62,0.5)',
-                    }}
-                    onPress={this.doFetchImageFromInternet}
-                  >
-                    <Text>Go</Text>
-                  </Button>
-                </Col>
+                <Button
+                  style={{
+                    backgroundColor: '#ffffff',
+                    margin: 10,
+                    borderRadius: 15,
+                  }}
+                  onPress={this.readFromClipboard}
+                >
+                  <Text style={{color: '#61dafb'}}>Paste URL</Text>
+                </Button>
+                <Button
+                  style={{
+                    borderRadius: 15,
+                    margin: 10,
+                    backgroundColor: '#61dafb',
+                  }}
+                  onPress={this.doFetchImageFromInternet}
+                >
+                  <Text>Go</Text>
+                </Button>
               </Row>
             </Grid>
           )}
@@ -195,7 +192,7 @@ export default class ShareImage extends Component {
                     <CardItem>
                       <Button
                         style={{
-                          backgroundColor: '#8dc53e',
+                          backgroundColor: '#61dafb',
                           flexDirection: 'row',
                           justifyContent: 'center',
                           alignItems: 'center',
@@ -225,8 +222,8 @@ export default class ShareImage extends Component {
 }
 ShareImage.navigationOptions = ({navigation}) => ({
   header: (
-    <Header style={{backgroundColor: '#8dc53e'}}>
-      <StatusBar backgroundColor="#000000" barStyle="light-content" />
+    <Header style={{backgroundColor: '#61dafb'}}>
+      <StatusBar backgroundColor="#58bdd8" barStyle="light-content" />
 
       <Body>
         <Title style={{marginLeft: 10}}>Share Image</Title>
