@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ShareImage from '../ImageShare/index.js'
-import {createDrawerNavigator, createAppContainer} from 'react-navigation'
-const ShareImageRouter = createDrawerNavigator(
+import {createStackNavigator, createAppContainer} from 'react-navigation'
+const ShareImageRouter = createStackNavigator(
   {
     ShareImage: {
       screen: ShareImage,
